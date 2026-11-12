@@ -1,0 +1,3 @@
+# Test configuration only (the project is run as scripts; no package install needed).
+[tool.pytest.ini_options]
+testpaths = ["tests"]

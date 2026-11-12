@@ -1,0 +1,119 @@
+{
+  "n_shipments": 40,
+  "n_routes": 162,
+  "decided_by": {
+    "trade-off score": 24,
+    "constraints/dominance": 13,
+    "fallback": 3
+  },
+  "E1_constraint_violations_in_recommendations": 0,
+  "E1_fallback_shipments": 3,
+  "E2_dominated_recommendations": 0,
+  "E3_decoys": {
+    "decoys": 8,
+    "decoy_chosen": 0,
+    "decoy_marked_dominated": 8
+  },
+  "E4_directional_consistency": {
+    "n": 37,
+    "cost_first_not_dearer": 0.972972972972973,
+    "time_critical_not_slower": 1.0,
+    "risk_averse_not_riskier": 0.972972972972973
+  },
+  "E5_baselines": [
+    {
+      "policy": "Ours (profile-weighted)",
+      "mean_cost_usd": 9249.587,
+      "median_cost_pct_of_value": 0.028,
+      "mean_days": 25.478,
+      "mean_p90_days": 30.057,
+      "mean_delay_prob": 0.404,
+      "mean_geo_risk": 0.246,
+      "constraint_violation_rate": 0.075,
+      "dominated_pick_rate": 0.0
+    },
+    {
+      "policy": "Cheapest (unconstrained)",
+      "mean_cost_usd": 2091.648,
+      "median_cost_pct_of_value": 0.015,
+      "mean_days": 33.335,
+      "mean_p90_days": 40.074,
+      "mean_delay_prob": 0.487,
+      "mean_geo_risk": 0.419,
+      "constraint_violation_rate": 0.4,
+      "dominated_pick_rate": 0.0
+    },
+    {
+      "policy": "Fastest (unconstrained)",
+      "mean_cost_usd": 45994.98,
+      "median_cost_pct_of_value": 0.308,
+      "mean_days": 6.005,
+      "mean_p90_days": 7.592,
+      "mean_delay_prob": 0.212,
+      "mean_geo_risk": 0.166,
+      "constraint_violation_rate": 0.425,
+      "dominated_pick_rate": 0.0
+    },
+    {
+      "policy": "Cheapest feasible",
+      "mean_cost_usd": 8581.15,
+      "median_cost_pct_of_value": 0.02,
+      "mean_days": 27.277,
+      "mean_p90_days": 32.769,
+      "mean_delay_prob": 0.44,
+      "mean_geo_risk": 0.351,
+      "constraint_violation_rate": 0.075,
+      "dominated_pick_rate": 0.0
+    },
+    {
+      "policy": "Fastest feasible",
+      "mean_cost_usd": 32700.528,
+      "median_cost_pct_of_value": 0.15,
+      "mean_days": 14.647,
+      "mean_p90_days": 17.796,
+      "mean_delay_prob": 0.3,
+      "mean_geo_risk": 0.227,
+      "constraint_violation_rate": 0.075,
+      "dominated_pick_rate": 0.0
+    }
+  ],
+  "E5_vs_cheapest_feasible": {
+    "n_differ": 14,
+    "by_profile": {
+      "balanced": 7,
+      "cost_first": 3,
+      "time_critical": 3,
+      "risk_averse": 1
+    },
+    "median_extra_cost_usd": 903.3299999999999,
+    "median_extra_cost_pct_of_value": 0.4089488722844885,
+    "mean_days_saved": 5.138277273583054,
+    "mean_delay_pp_saved": 10.32678571428571,
+    "mean_geo_reduction": 0.2992142857142857
+  },
+  "E6_robustness": {
+    "verdicts": {
+      "ROBUST": 14,
+      "n/a (single option)": 13,
+      "CLOSE CALL": 7,
+      "MODERATE": 3,
+      "fallback": 3
+    },
+    "mean_weight_stability": 0.9067708333333333,
+    "mean_estimate_stability": 0.7927083333333335,
+    "mc_seed_agreement": 1.0
+  },
+  "E7_context_sensitivity": {
+    "share_with_profile_dependent_winner": 0.25,
+    "distinct_winner_counts": {
+      "1": 30,
+      "2": 8,
+      "3": 2
+    }
+  },
+  "E8_rank_reversal": {
+    "ours": "0/40",
+    "minmax": "5/40"
+  },
+  "runtime_s": 3.5
+}

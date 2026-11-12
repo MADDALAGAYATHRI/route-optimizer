@@ -1,0 +1,6 @@
+policy,mean_cost_usd,median_cost_pct_of_value,mean_days,mean_p90_days,mean_delay_prob,mean_geo_risk,constraint_violation_rate,dominated_pick_rate
+Ours (profile-weighted),9249.587,0.028,25.478,30.057,0.404,0.246,0.075,0.0
+Cheapest (unconstrained),2091.648,0.015,33.335,40.074,0.487,0.419,0.4,0.0
+Fastest (unconstrained),45994.98,0.308,6.005,7.592,0.212,0.166,0.425,0.0
+Cheapest feasible,8581.15,0.02,27.277,32.769,0.44,0.351,0.075,0.0
+Fastest feasible,32700.528,0.15,14.647,17.796,0.3,0.227,0.075,0.0

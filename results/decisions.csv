@@ -1,0 +1,41 @@
+shipment_id,lane,cargo,profile,n_routes,n_feasible,n_candidates,decided_by,winner,winner_route,winner_archetype,cost_usd,expected_days,p90_days,delay_prob,geo_risk,weight_stability,estimate_stability,seed_agreement,verdict,distinct_winners_across_profiles
+SHP-001,Shanghai-Rotterdam,bulk_goods,balanced,4,1,1,constraints/dominance,R1,Sea via Singapore & Suez,short_via_chokepoint,4290.69,41.5,49.7,0.58,0.794,,,1.0,n/a (single option),1
+SHP-002,Shenzhen-Los Angeles,auto_parts,time_critical,4,1,1,constraints/dominance,R3,Air via Anchorage,air,84575.9,4.3,5.3,0.147,0.141,,,1.0,n/a (single option),1
+SHP-003,Nhava Sheva-Hamburg,bulk_goods,cost_first,5,3,2,trade-off score,R1,Sea via Suez,short_via_chokepoint,3129.75,28.6,37.1,0.531,0.68,0.99,0.975,1.0,ROBUST,2
+SHP-004,Chennai-New York,auto_parts,balanced,4,4,3,trade-off score,R2,Sea via Colombo & Cape,safe_detour,4752.31,45.5,51.7,0.511,0.196,0.955,0.775,1.0,MODERATE,2
+SHP-005,Santos-Rotterdam,bulk_goods,cost_first,3,2,2,trade-off score,R1,Direct sea,direct_sea,3002.15,23.9,29.3,0.38,0.188,1.0,1.0,1.0,ROBUST,1
+SHP-006,Busan-Houston,bulk_goods,cost_first,3,3,3,trade-off score,R1,Sea to LA + rail landbridge,intermodal,4901.74,28.5,33.0,0.486,0.103,0.6875,0.5,1.0,CLOSE CALL,1
+SHP-007,Shanghai-Rotterdam,auto_parts,balanced,4,4,4,trade-off score,R2,Sea via Singapore & Cape,safe_detour,3579.38,49.4,54.4,0.478,0.139,0.585,0.6,1.0,CLOSE CALL,2
+SHP-008,Shenzhen-Los Angeles,pharma,risk_averse,3,1,1,constraints/dominance,R1,Direct transpacific sea,direct_sea,795.07,26.7,32.4,0.383,0.158,,,1.0,n/a (single option),1
+SHP-009,Nhava Sheva-Hamburg,pharma,time_critical,4,2,2,trade-off score,R4,Air via Frankfurt,air,10061.81,3.8,4.8,0.145,0.103,1.0,1.0,1.0,ROBUST,1
+SHP-010,Chennai-New York,auto_parts,balanced,4,4,4,trade-off score,R2,Sea via Colombo & Cape,safe_detour,2726.5,44.8,50.3,0.482,0.208,0.8175,0.5,1.0,CLOSE CALL,2
+SHP-011,Santos-Rotterdam,perishables,time_critical,4,1,1,constraints/dominance,R4,Air via Frankfurt,air,39703.15,5.4,7.1,0.299,0.204,,,1.0,n/a (single option),1
+SHP-012,Busan-Houston,perishables,balanced,4,4,4,trade-off score,R2,Sea to LA + rail landbridge,intermodal,3147.31,27.9,32.0,0.445,0.104,1.0,0.65,1.0,MODERATE,2
+SHP-013,Shanghai-Rotterdam,bulk_goods,cost_first,4,4,4,trade-off score,R1,Sea via Singapore & Suez,short_via_chokepoint,5047.28,42.2,50.3,0.596,0.757,0.8675,0.8,1.0,ROBUST,3
+SHP-014,Shenzhen-Los Angeles,perishables,time_critical,4,3,3,trade-off score,R2,Sea to Oakland + truck,alt_port,1631.2,23.2,26.3,0.338,0.139,0.97,1.0,1.0,ROBUST,1
+SHP-015,Nhava Sheva-Hamburg,electronics,time_critical,5,2,2,trade-off score,R5,Air via Frankfurt,air,11927.83,4.3,5.8,0.251,0.095,1.0,1.0,1.0,ROBUST,1
+SHP-016,Chennai-New York,pharma,risk_averse,3,0,1,fallback,R2,Sea via Colombo & Cape,safe_detour,1203.83,45.6,51.8,0.505,0.199,,,1.0,fallback,1
+SHP-017,Santos-Rotterdam,pharma,risk_averse,3,3,3,trade-off score,R3,Air via Frankfurt,air,5009.79,5.6,7.6,0.337,0.218,1.0,1.0,1.0,ROBUST,1
+SHP-018,Busan-Houston,bulk_goods,cost_first,5,1,1,constraints/dominance,R1,Sea via Panama,short_via_chokepoint,3183.6,34.5,40.7,0.453,0.207,,,1.0,n/a (single option),1
+SHP-019,Shanghai-Rotterdam,electronics,risk_averse,4,0,2,fallback,R2,Sea-air via Jebel Ali / Dubai,hybrid,3929.84,24.8,28.9,0.411,0.379,,,1.0,fallback,1
+SHP-020,Shenzhen-Los Angeles,bulk_goods,balanced,5,3,3,trade-off score,R1,Direct transpacific sea,direct_sea,2052.19,27.7,34.4,0.441,0.147,0.98,0.875,1.0,ROBUST,2
+SHP-021,Nhava Sheva-Hamburg,apparel,balanced,5,1,1,constraints/dominance,R4,Sea-air via Dubai,hybrid,36693.81,11.3,14.9,0.365,0.38,,,1.0,n/a (single option),1
+SHP-022,Chennai-New York,apparel,cost_first,3,2,2,trade-off score,R1,Sea via Colombo & Cape,safe_detour,4636.8,45.0,50.7,0.484,0.213,1.0,0.575,1.0,CLOSE CALL,1
+SHP-023,Santos-Rotterdam,pharma,time_critical,5,1,1,constraints/dominance,R4,Air via Frankfurt,air,7432.05,5.2,6.7,0.253,0.202,,,1.0,n/a (single option),1
+SHP-024,Busan-Houston,apparel,cost_first,4,3,3,trade-off score,R2,Sea to LA + rail landbridge,intermodal,4873.63,28.4,32.5,0.482,0.091,1.0,0.825,1.0,ROBUST,1
+SHP-025,Shanghai-Rotterdam,electronics,time_critical,3,1,1,constraints/dominance,R2,Rail land bridge via Khorgos,overland,1069.33,24.0,28.0,0.477,0.556,,,1.0,n/a (single option),1
+SHP-026,Shenzhen-Los Angeles,electronics,time_critical,4,1,1,constraints/dominance,R4,Air via Anchorage,air,15874.33,4.3,5.4,0.152,0.147,,,1.0,n/a (single option),1
+SHP-027,Nhava Sheva-Hamburg,perishables,time_critical,4,1,1,constraints/dominance,R4,Air via Frankfurt,air,20683.07,4.2,5.6,0.226,0.092,,,1.0,n/a (single option),1
+SHP-028,Chennai-New York,pharma,risk_averse,4,2,2,trade-off score,R2,Sea via Colombo & Cape,safe_detour,1275.37,44.6,50.0,0.467,0.194,1.0,0.725,1.0,MODERATE,1
+SHP-029,Santos-Rotterdam,auto_parts,balanced,4,4,3,trade-off score,R1,Direct sea,direct_sea,1152.61,23.3,28.5,0.349,0.22,1.0,0.8,1.0,ROBUST,1
+SHP-030,Busan-Houston,electronics,risk_averse,4,1,1,constraints/dominance,R1,Sea via Panama,short_via_chokepoint,982.1,34.4,40.3,0.442,0.216,,,1.0,n/a (single option),1
+SHP-031,Shanghai-Rotterdam,electronics,balanced,4,2,2,trade-off score,R2,Sea via Singapore & Cape,safe_detour,1648.64,51.1,57.8,0.54,0.15,0.9975,0.925,1.0,ROBUST,1
+SHP-032,Shenzhen-Los Angeles,electronics,balanced,5,2,2,trade-off score,R1,Direct transpacific sea,direct_sea,814.57,26.7,32.6,0.392,0.157,1.0,0.825,1.0,ROBUST,1
+SHP-033,Nhava Sheva-Hamburg,perishables,time_critical,3,0,3,fallback,R3,Sea-air via Dubai,hybrid,12766.37,13.2,19.5,0.498,0.384,,,1.0,fallback,1
+SHP-034,Chennai-New York,electronics,balanced,3,3,3,trade-off score,R3,Air via Frankfurt,air,10016.45,4.8,6.0,0.185,0.097,1.0,1.0,1.0,ROBUST,1
+SHP-035,Santos-Rotterdam,apparel,balanced,5,1,1,constraints/dominance,R1,Direct sea,direct_sea,1378.49,23.3,28.3,0.358,0.194,,,1.0,n/a (single option),1
+SHP-036,Busan-Houston,perishables,time_critical,5,5,4,trade-off score,R2,Sea to LA + rail landbridge,intermodal,1482.95,28.2,32.4,0.47,0.109,0.705,0.55,1.0,CLOSE CALL,2
+SHP-037,Shanghai-Rotterdam,auto_parts,balanced,5,5,5,trade-off score,R3,Rail land bridge via Khorgos,overland,6422.23,25.0,30.1,0.54,0.563,0.565,0.725,1.0,CLOSE CALL,3
+SHP-038,Shenzhen-Los Angeles,apparel,balanced,4,4,3,trade-off score,R1,Direct transpacific sea,direct_sea,3005.38,26.1,31.3,0.35,0.147,1.0,0.925,1.0,ROBUST,1
+SHP-039,Nhava Sheva-Hamburg,bulk_goods,cost_first,4,1,1,constraints/dominance,R2,Sea-air via Dubai,hybrid,34648.18,11.7,16.5,0.397,0.372,,,1.0,n/a (single option),1
+SHP-040,Chennai-New York,apparel,cost_first,5,5,4,trade-off score,R2,Sea via Colombo & Cape,safe_detour,4475.8,46.0,52.7,0.528,0.198,0.6425,0.475,1.0,CLOSE CALL,2

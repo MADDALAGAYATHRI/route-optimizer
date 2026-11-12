@@ -1,0 +1,692 @@
+Shipment SHP-001: bulk goods, 23.5 t, Shanghai -> Rotterdam
+Priority: balanced | Constraints: budget $9,530
+
+RECOMMENDED: R1 - Sea via Singapore & Suez
+  $4,291 | 41.5 days expected (P90 49.7) | delay prob 58% | geo risk 0.79
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R2 Rail land bridge via Khorgos: ruled out - cost $13,150 exceeds budget $9,530.
+  R3 Sea-air via Jebel Ali / Dubai: ruled out - cost $39,522 exceeds budget $9,530.
+  R4 Air via Frankfurt: ruled out - cost $61,415 exceeds budget $9,530.
+
+==========================================================================================
+
+Shipment SHP-002: auto parts, 20.2 t, Shenzhen -> Los Angeles
+Priority: time-critical | Constraints: deadline 16 d at >= 85% on-time, budget $116,390
+
+RECOMMENDED: R3 - Air via Anchorage
+  $84,576 | 4.3 days expected (P90 5.3) | delay prob 15% | geo risk 0.14 | on-time 100%
+
+Price of constraints: the cheapest option, R1 (Direct transpacific sea, $2,588), is ruled out by the deadline; the recommendation costs $81,988 more.
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R1 Direct transpacific sea: ruled out - on-time probability 0% < required 85% for the 16-day deadline.
+  R2 Sea via Busan transshipment: ruled out - on-time probability 0% < required 85% for the 16-day deadline.
+  R4 Sea via Busan transshipment (extra transshipment): ruled out - on-time probability 0% < required 85% for the 16-day deadline.
+
+==========================================================================================
+
+Shipment SHP-003: bulk goods, 24.7 t, Nhava Sheva -> Hamburg
+Priority: cost-first | Constraints: budget $9,130
+
+RECOMMENDED: R1 - Sea via Suez
+  $3,130 | 28.6 days expected (P90 37.1) | delay prob 53% | geo risk 0.68
+
+Why R1 over R2 (Sea via Cape of Good Hope): it has geopolitical risk 0.68 vs 0.11, has a 53% delay probability vs 44%, but is $1,851 cheaper (-37%) and arrives 13.4 days sooner on average (28.6 vs 42.0). For a cost-first shipment, the gain in cost outweighs the geopolitical risk penalty (trade-off penalty 26 vs 59 points; 0 = best on every criterion).
+
+Other options:
+  R3 Sea via Jebel Ali & Suez: never a contender - R1 is at least as good on cost, time, delay risk and geo risk, and strictly better on at least one.
+  R4 Sea-air via Dubai: ruled out - cost $43,785 exceeds budget $9,130.
+  R5 Air via Frankfurt: ruled out - cost $57,705 exceeds budget $9,130.
+
+Confidence: ROBUST - winner holds in 99% of priority-weight perturbations and 98% of risk-estimate perturbations.
+  Break-even: switches to R2 (Sea via Cape of Good Hope) if the geopolitical risk weight rises from 10% to 24%.
+
+==========================================================================================
+
+Shipment SHP-004: auto parts, 21.7 t, Chennai -> New York
+Priority: balanced | No hard constraints
+
+RECOMMENDED: R2 - Sea via Colombo & Cape
+  $4,752 | 45.5 days expected (P90 51.7) | delay prob 51% | geo risk 0.20
+
+Why R2 over R1 (Sea via Colombo & Suez): it takes 8.4 days longer on average (45.5 vs 37.2), but has geopolitical risk 0.20 vs 0.80 and has a 51% delay probability vs 61%. For a balanced shipment, the gain in geopolitical risk outweighs the expected transit time penalty (trade-off penalty 122 vs 147 points; 0 = best on every criterion).
+
+Other options:
+  R3 Sea via Singapore & Panama: never a contender - R2 is at least as good on cost, time, delay risk and geo risk, and strictly better on at least one.
+  R4 Air via Frankfurt: penalty 246 - main weakness vs R2: it costs $113,291 more (+2384%).
+
+Confidence: MODERATE - winner holds in 96% of priority-weight perturbations and 78% of risk-estimate perturbations.
+  Break-even: switches to R4 (Air via Frankfurt) if the expected transit time weight rises from 25% to 48%.
+
+==========================================================================================
+
+Shipment SHP-005: bulk goods, 25.0 t, Santos -> Rotterdam
+Priority: cost-first | Constraints: budget $5,630
+
+RECOMMENDED: R1 - Direct sea
+  $3,002 | 23.9 days expected (P90 29.3) | delay prob 38% | geo risk 0.19
+
+Why R1 over R2 (Sea via Algeciras transshipment): it is $488 cheaper (-14%), has a 38% delay probability vs 47% and arrives 4.5 days sooner on average (23.9 vs 28.4). Under the cost-first profile this is the stronger option (trade-off penalty 0 vs 23 points; 0 = best on every criterion).
+
+Other options:
+  R3 Air via Frankfurt: ruled out - cost $102,958 exceeds budget $5,630.
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 100% of risk-estimate perturbations.
+  Break-even: switches to R2 (Sea via Algeciras transshipment) if the geopolitical risk weight rises from 10% to 100%.
+
+==========================================================================================
+
+Shipment SHP-006: bulk goods, 21.9 t, Busan -> Houston
+Priority: cost-first | Constraints: deadline 31 d at >= 75% on-time
+
+RECOMMENDED: R1 - Sea to LA + rail landbridge
+  $4,902 | 28.5 days expected (P90 33.0) | delay prob 49% | geo risk 0.10 | on-time 84%
+
+Why R1 over R2 (Sea via Manzanillo + rail): it has geopolitical risk 0.10 vs 0.31. Under the cost-first profile this is the stronger option (trade-off penalty 59 vs 61 points; 0 = best on every criterion).
+
+Other options:
+  R3 Air via Anchorage: penalty 2493 - main weakness vs R1: it costs $90,797 more (+1852%).
+
+Confidence: CLOSE CALL - winner holds in 69% of priority-weight perturbations and 50% of risk-estimate perturbations.
+  Break-even: switches to R2 (Sea via Manzanillo + rail) if the cost weight rises from 60% to 68%.
+  Recommend operator review: the top options are near-equivalent under plausible priorities.
+
+==========================================================================================
+
+Shipment SHP-007: auto parts, 13.3 t, Shanghai -> Rotterdam
+Priority: balanced | No hard constraints
+
+RECOMMENDED: R2 - Sea via Singapore & Cape
+  $3,579 | 49.4 days expected (P90 54.4) | delay prob 48% | geo risk 0.14
+
+Why R2 over R4 (Air via Frankfurt): it takes 45.3 days longer on average (49.4 vs 4.1), has a 48% delay probability vs 14%, but is $37,435 cheaper (-91%). For a balanced shipment, the gain in cost outweighs the expected transit time penalty (trade-off penalty 125 vs 134 points; 0 = best on every criterion).
+
+Other options:
+  R1 Sea via Singapore & Suez: penalty 145 - main weakness vs R2: it weaker expected transit time.
+  R3 Sea-air via Jebel Ali / Dubai: penalty 158 - main weakness vs R2: it costs $22,768 more (+636%).
+
+Confidence: CLOSE CALL - winner holds in 58% of priority-weight perturbations and 60% of risk-estimate perturbations.
+  Break-even: switches to R4 (Air via Frankfurt) if the expected transit time weight rises from 25% to 28%.
+  Recommend operator review: the top options are near-equivalent under plausible priorities.
+
+==========================================================================================
+
+Shipment SHP-008: pharma, 4.2 t, Shenzhen -> Los Angeles
+Priority: risk-averse | Constraints: budget $2,000, geo-risk <= 0.60
+
+RECOMMENDED: R1 - Direct transpacific sea
+  $795 | 26.7 days expected (P90 32.4) | delay prob 38% | geo risk 0.16
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R2 Sea-air via Busan / Incheon: ruled out - cost $17,800 exceeds budget $2,000.
+  R3 Air via Anchorage: ruled out - cost $21,866 exceeds budget $2,000.
+
+==========================================================================================
+
+Shipment SHP-009: pharma, 4.7 t, Nhava Sheva -> Hamburg
+Priority: time-critical | Constraints: deadline 23 d at >= 85% on-time, geo-risk <= 0.60
+
+RECOMMENDED: R4 - Air via Frankfurt
+  $10,062 | 3.8 days expected (P90 4.8) | delay prob 14% | geo risk 0.10 | on-time 100%
+
+Price of constraints: the cheapest option, R2 (Sea via Jebel Ali & Suez, $972), is ruled out by the deadline; the recommendation costs $9,090 more.
+
+Why R4 over R3 (Sea-air via Dubai): it has a 14% delay probability vs 36%, arrives 7.4 days sooner on average (3.8 vs 11.2) and has geopolitical risk 0.10 vs 0.35. Under the time-critical profile this is the stronger option (trade-off penalty 1 vs 65 points; 0 = best on every criterion).
+
+Other options:
+  R1 Sea via Cape of Good Hope: ruled out - on-time probability 0% < required 85% for the 23-day deadline.
+  R2 Sea via Jebel Ali & Suez: ruled out - on-time probability 0% < required 85% for the 23-day deadline; geopolitical risk 0.82 above limit 0.60.
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 100% of risk-estimate perturbations.
+  Break-even: switches to R3 (Sea-air via Dubai) if the cost weight rises from 15% to 97%.
+
+==========================================================================================
+
+Shipment SHP-010: auto parts, 9.9 t, Chennai -> New York
+Priority: balanced | No hard constraints
+
+RECOMMENDED: R2 - Sea via Colombo & Cape
+  $2,726 | 44.8 days expected (P90 50.3) | delay prob 48% | geo risk 0.21
+
+Why R2 over R1 (Sea via Colombo & Suez): it takes 9.0 days longer on average (44.8 vs 35.8), but has geopolitical risk 0.21 vs 0.71 and has a 48% delay probability vs 55%. For a balanced shipment, the gain in geopolitical risk outweighs the expected transit time penalty (trade-off penalty 121 vs 136 points; 0 = best on every criterion).
+
+Other options:
+  R3 Sea via Singapore & Panama: penalty 139 - main weakness vs R2: it takes 6.1 days longer on average (50.9 vs 44.8).
+  R4 Air via Frankfurt: penalty 199 - main weakness vs R2: it costs $41,577 more (+1525%).
+
+Confidence: CLOSE CALL - winner holds in 82% of priority-weight perturbations and 50% of risk-estimate perturbations.
+  Break-even: switches to R1 (Sea via Colombo & Suez) if the expected transit time weight rises from 25% to 40%.
+  Recommend operator review: the top options are near-equivalent under plausible priorities.
+
+==========================================================================================
+
+Shipment SHP-011: perishables, 10.4 t, Santos -> Rotterdam
+Priority: time-critical | Constraints: deadline 24 d at >= 85% on-time
+
+RECOMMENDED: R4 - Air via Frankfurt
+  $39,703 | 5.4 days expected (P90 7.1) | delay prob 30% | geo risk 0.20 | on-time 100%
+
+Price of constraints: the cheapest option, R1 (Direct sea, $1,410), is ruled out by the deadline; the recommendation costs $38,293 more.
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R1 Direct sea: ruled out - on-time probability 69% < required 85% for the 24-day deadline.
+  R2 Sea via Algeciras transshipment: ruled out - on-time probability 0% < required 85% for the 24-day deadline.
+  R3 Sea via Tanger Med transshipment: ruled out - on-time probability 0% < required 85% for the 24-day deadline.
+
+==========================================================================================
+
+Shipment SHP-012: perishables, 13.8 t, Busan -> Houston
+Priority: balanced | Constraints: deadline 45 d at >= 75% on-time
+
+RECOMMENDED: R2 - Sea to LA + rail landbridge
+  $3,147 | 27.9 days expected (P90 32.0) | delay prob 45% | geo risk 0.10 | on-time 100%
+
+Why R2 over R1 (Sea via Panama): it costs $811 more (+35%), but arrives 7.2 days sooner on average (27.9 vs 35.1) and has geopolitical risk 0.10 vs 0.20. For a balanced shipment, the gain in expected transit time outweighs the cost penalty (trade-off penalty 90 vs 103 points; 0 = best on every criterion).
+
+Other options:
+  R3 Sea via Manzanillo + rail: penalty 103 - main weakness vs R2: it weaker expected transit time.
+  R4 Air via Anchorage: penalty 421 - main weakness vs R2: it costs $48,954 more (+1555%).
+
+Confidence: MODERATE - winner holds in 100% of priority-weight perturbations and 65% of risk-estimate perturbations.
+  Break-even: switches to R1 (Sea via Panama) if the cost weight rises from 35% to 61%.
+
+==========================================================================================
+
+Shipment SHP-013: bulk goods, 24.7 t, Shanghai -> Rotterdam
+Priority: cost-first | No hard constraints
+
+RECOMMENDED: R1 - Sea via Singapore & Suez
+  $5,047 | 42.2 days expected (P90 50.3) | delay prob 60% | geo risk 0.76
+
+Why R1 over R2 (Sea via Singapore & Cape): it has geopolitical risk 0.76 vs 0.16, has a 60% delay probability vs 52%, but is $1,260 cheaper (-20%) and arrives 8.4 days sooner on average (42.2 vs 50.5). For a cost-first shipment, the gain in cost outweighs the geopolitical risk penalty (trade-off penalty 92 vs 106 points; 0 = best on every criterion).
+
+Other options:
+  R3 Rail land bridge via Khorgos: penalty 197 - main weakness vs R1: it costs $5,600 more (+111%).
+  R4 Air via Frankfurt: penalty 2084 - main weakness vs R1: it costs $85,785 more (+1700%).
+
+Confidence: ROBUST - winner holds in 87% of priority-weight perturbations and 80% of risk-estimate perturbations.
+  Break-even: switches to R2 (Sea via Singapore & Cape) if the geopolitical risk weight rises from 10% to 17%.
+
+==========================================================================================
+
+Shipment SHP-014: perishables, 6.8 t, Shenzhen -> Los Angeles
+Priority: time-critical | Constraints: deadline 26 d at >= 85% on-time, budget $39,610
+
+RECOMMENDED: R2 - Sea to Oakland + truck
+  $1,631 | 23.2 days expected (P90 26.3) | delay prob 34% | geo risk 0.14 | on-time 91%
+
+Price of constraints: the cheapest option, R1 (Sea via Busan transshipment, $1,318), is ruled out by the deadline; the recommendation costs $313 more.
+
+Why R2 over R3 (Sea-air via Busan / Incheon): it takes 12.0 days longer on average (23.2 vs 11.1), has a 34% delay probability vs 29%, but is $26,658 cheaper (-94%). For a time-critical shipment, the gain in cost outweighs the expected transit time penalty (trade-off penalty 92 vs 243 points; 0 = best on every criterion).
+
+Other options:
+  R1 Sea via Busan transshipment: ruled out - on-time probability 0% < required 85% for the 26-day deadline.
+  R4 Air via Anchorage: penalty 245 - main weakness vs R2: it costs $33,308 more (+2042%).
+
+Confidence: ROBUST - winner holds in 97% of priority-weight perturbations and 100% of risk-estimate perturbations.
+  Break-even: switches to R4 (Air via Anchorage) if the expected transit time weight rises from 45% to 75%.
+
+==========================================================================================
+
+Shipment SHP-015: electronics, 5.8 t, Nhava Sheva -> Hamburg
+Priority: time-critical | Constraints: deadline 22 d at >= 85% on-time, budget $14,370
+
+RECOMMENDED: R5 - Air via Frankfurt
+  $11,928 | 4.3 days expected (P90 5.8) | delay prob 25% | geo risk 0.10 | on-time 100%
+
+Price of constraints: the cheapest option, R1 (Sea via Suez, $867), is ruled out by the deadline; the recommendation costs $11,061 more.
+
+Why R5 over R4 (Sea-air via Dubai): it has a 25% delay probability vs 48%, arrives 8.8 days sooner on average (4.3 vs 13.1) and has geopolitical risk 0.10 vs 0.37. Under the time-critical profile this is the stronger option (trade-off penalty 1 vs 72 points; 0 = best on every criterion).
+
+Other options:
+  R1 Sea via Suez: ruled out - on-time probability 0% < required 85% for the 22-day deadline.
+  R2 Sea via Cape of Good Hope: ruled out - on-time probability 0% < required 85% for the 22-day deadline.
+  R3 Sea via Jebel Ali & Suez: ruled out - on-time probability 0% < required 85% for the 22-day deadline.
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 100% of risk-estimate perturbations.
+  Break-even: switches to R4 (Sea-air via Dubai) if the cost weight rises from 15% to 93%.
+
+==========================================================================================
+
+Shipment SHP-016: pharma, 4.1 t, Chennai -> New York
+Priority: risk-averse | Constraints: deadline 40 d at >= 75% on-time, geo-risk <= 0.60
+
+WARNING: no route satisfies every hard constraint. Showing the least-violating option -- escalate to a planner (relax deadline/budget or split the shipment).
+  - still violates: on-time probability 0% < required 75% for the 40-day deadline
+RECOMMENDED: R2 - Sea via Colombo & Cape
+  $1,204 | 45.6 days expected (P90 51.8) | delay prob 51% | geo risk 0.20 | on-time 0%
+
+Price of constraints: the cheapest option, R1 (Sea via Colombo & Suez, $1,023), is ruled out by the deadline; the recommendation costs $181 more.
+
+Why R2: among routes that respect the geopolitical-risk limit (never relaxed), it has the smallest relative breach of the relaxable constraints (deadline, budget).
+
+Other options:
+  R1 Sea via Colombo & Suez: violates - on-time probability 72% < required 75% for the 40-day deadline; geopolitical risk 0.68 above limit 0.60.
+  R3 Sea via Singapore & Panama: violates - on-time probability 0% < required 75% for the 40-day deadline.
+
+==========================================================================================
+
+Shipment SHP-017: pharma, 1.5 t, Santos -> Rotterdam
+Priority: risk-averse | Constraints: geo-risk <= 0.60
+
+RECOMMENDED: R3 - Air via Frankfurt
+  $5,010 | 5.6 days expected (P90 7.6) | delay prob 34% | geo risk 0.22
+
+Why R3 over R1 (Sea via Algeciras transshipment): it costs $4,398 more (+719%), but arrives 22.8 days sooner on average (5.6 vs 28.4) and has a 34% delay probability vs 48%. For a risk-averse shipment, the gain in expected transit time outweighs the cost penalty (trade-off penalty 7 vs 46 points; 0 = best on every criterion).
+
+Other options:
+  R2 Sea via Tanger Med transshipment: penalty 47 - main weakness vs R3: it takes 22.9 days longer on average (28.5 vs 5.6).
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 100% of risk-estimate perturbations.
+  Break-even: switches to R1 (Sea via Algeciras transshipment) if the cost weight rises from 20% to 71%.
+
+==========================================================================================
+
+Shipment SHP-018: bulk goods, 21.4 t, Busan -> Houston
+Priority: cost-first | Constraints: deadline 42 d at >= 75% on-time, budget $3,520
+
+RECOMMENDED: R1 - Sea via Panama
+  $3,184 | 34.5 days expected (P90 40.7) | delay prob 45% | geo risk 0.21 | on-time 93%
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R2 Sea to LA + rail landbridge: ruled out - cost $4,520 exceeds budget $3,520.
+  R3 Sea via Manzanillo + rail: ruled out - cost $4,355 exceeds budget $3,520.
+  R4 Air via Anchorage: ruled out - cost $94,166 exceeds budget $3,520.
+  R5 Sea via Manzanillo + rail (extra transshipment): ruled out - cost $5,517 exceeds budget $3,520.
+
+==========================================================================================
+
+Shipment SHP-019: electronics, 1.8 t, Shanghai -> Rotterdam
+Priority: risk-averse | Constraints: budget $1,140, geo-risk <= 0.60
+
+WARNING: no route satisfies every hard constraint. Showing the least-violating option -- escalate to a planner (relax deadline/budget or split the shipment).
+  - still violates: cost $3,930 exceeds budget $1,140
+RECOMMENDED: R2 - Sea-air via Jebel Ali / Dubai
+  $3,930 | 24.8 days expected (P90 28.9) | delay prob 41% | geo risk 0.38
+
+Price of constraints: the cheapest option, R1 (Sea via Singapore & Suez, $782), is ruled out by the geopolitical-risk limit; the recommendation costs $3,147 more.
+
+Why R2: among routes that respect the geopolitical-risk limit (never relaxed), it has the smallest relative breach of the relaxable constraints (deadline, budget).
+
+Other options:
+  R1 Sea via Singapore & Suez: violates - geopolitical risk 0.68 above limit 0.60.
+  R3 Air via Frankfurt: violates - cost $5,459 exceeds budget $1,140.
+  R4 Sea via Singapore & Suez (extra transshipment): violates - cost $1,210 exceeds budget $1,140; geopolitical risk 0.68 above limit 0.60.
+
+==========================================================================================
+
+Shipment SHP-020: bulk goods, 15.4 t, Shenzhen -> Los Angeles
+Priority: balanced | Constraints: budget $3,040
+
+RECOMMENDED: R1 - Direct transpacific sea
+  $2,052 | 27.7 days expected (P90 34.4) | delay prob 44% | geo risk 0.15
+
+Why R1 over R3 (Sea to Oakland + truck): it takes 3.3 days longer on average (27.7 vs 24.4), has a 44% delay probability vs 41%, but is $921 cheaper (-31%). For a balanced shipment, the gain in cost outweighs the expected transit time penalty (trade-off penalty 9 vs 21 points; 0 = best on every criterion).
+
+Other options:
+  R2 Sea via Busan transshipment: penalty 35 - main weakness vs R1: it has a 54% delay probability vs 44%.
+  R4 Sea-air via Busan / Incheon: ruled out - cost $55,916 exceeds budget $3,040.
+  R5 Air via Anchorage: ruled out - cost $69,306 exceeds budget $3,040.
+
+Confidence: ROBUST - winner holds in 98% of priority-weight perturbations and 88% of risk-estimate perturbations.
+  Break-even: switches to R3 (Sea to Oakland + truck) if the expected transit time weight rises from 25% to 50%.
+
+==========================================================================================
+
+Shipment SHP-021: apparel, 20.6 t, Nhava Sheva -> Hamburg
+Priority: balanced | Constraints: deadline 23 d at >= 75% on-time, budget $42,210
+
+RECOMMENDED: R4 - Sea-air via Dubai
+  $36,694 | 11.3 days expected (P90 14.9) | delay prob 37% | geo risk 0.38 | on-time 98%
+
+Price of constraints: the cheapest option, R1 (Sea via Suez, $2,710), is ruled out by the deadline; the recommendation costs $33,983 more.
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R1 Sea via Suez: ruled out - on-time probability 0% < required 75% for the 23-day deadline.
+  R2 Sea via Cape of Good Hope: ruled out - on-time probability 0% < required 75% for the 23-day deadline.
+  R3 Sea via Jebel Ali & Suez: ruled out - on-time probability 0% < required 75% for the 23-day deadline.
+  R5 Air via Frankfurt: ruled out - cost $48,201 exceeds budget $42,210.
+
+==========================================================================================
+
+Shipment SHP-022: apparel, 22.6 t, Chennai -> New York
+Priority: cost-first | Constraints: deadline 47 d at >= 75% on-time, budget $169,240
+
+RECOMMENDED: R1 - Sea via Colombo & Cape
+  $4,637 | 45.0 days expected (P90 50.7) | delay prob 48% | geo risk 0.21 | on-time 77%
+
+Why R1 over R3 (Air via Frankfurt): it takes 40.3 days longer on average (45.0 vs 4.7), has a 48% delay probability vs 17%, has geopolitical risk 0.21 vs 0.11, but is $120,604 cheaper (-96%). For a cost-first shipment, the gain in cost outweighs the expected transit time penalty (trade-off penalty 70 vs 800 points; 0 = best on every criterion).
+
+Other options:
+  R2 Sea via Singapore & Panama: ruled out - on-time probability 0% < required 75% for the 47-day deadline.
+
+Confidence: CLOSE CALL - winner holds in 100% of priority-weight perturbations and 57% of risk-estimate perturbations.
+  Break-even: switches to R3 (Air via Frankfurt) if the expected transit time weight rises from 15% to 76%.
+  Recommend operator review: the top options are near-equivalent under plausible priorities.
+
+==========================================================================================
+
+Shipment SHP-023: pharma, 2.3 t, Santos -> Rotterdam
+Priority: time-critical | Constraints: deadline 16 d at >= 85% on-time, geo-risk <= 0.60
+
+RECOMMENDED: R4 - Air via Frankfurt
+  $7,432 | 5.2 days expected (P90 6.7) | delay prob 25% | geo risk 0.20 | on-time 100%
+
+Price of constraints: the cheapest option, R1 (Direct sea, $553), is ruled out by the deadline; the recommendation costs $6,879 more.
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R1 Direct sea: ruled out - on-time probability 0% < required 85% for the 16-day deadline.
+  R2 Sea via Algeciras transshipment: ruled out - on-time probability 0% < required 85% for the 16-day deadline.
+  R3 Sea via Tanger Med transshipment: ruled out - on-time probability 0% < required 85% for the 16-day deadline.
+  R5 Sea via Tanger Med transshipment (extra transshipment): ruled out - on-time probability 0% < required 85% for the 16-day deadline.
+
+==========================================================================================
+
+Shipment SHP-024: apparel, 22.7 t, Busan -> Houston
+Priority: cost-first | Constraints: deadline 31 d at >= 75% on-time, budget $158,190
+
+RECOMMENDED: R2 - Sea to LA + rail landbridge
+  $4,874 | 28.4 days expected (P90 32.5) | delay prob 48% | geo risk 0.09 | on-time 83%
+
+Price of constraints: the cheapest option, R1 (Sea via Panama, $3,756), is ruled out by the deadline; the recommendation costs $1,118 more.
+
+Why R2 over R3 (Sea via Manzanillo + rail): it has geopolitical risk 0.09 vs 0.32. Under the cost-first profile this is the stronger option (trade-off penalty 52 vs 61 points; 0 = best on every criterion).
+
+Other options:
+  R1 Sea via Panama: ruled out - on-time probability 0% < required 75% for the 31-day deadline.
+  R4 Air via Anchorage: penalty 639 - main weakness vs R2: it costs $96,449 more (+1979%).
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 82% of risk-estimate perturbations.
+  Break-even: switches to R4 (Air via Anchorage) if the delay probability weight rises from 15% to 81%.
+
+==========================================================================================
+
+Shipment SHP-025: electronics, 1.1 t, Shanghai -> Rotterdam
+Priority: time-critical | Constraints: deadline 34 d at >= 85% on-time, budget $1,610
+
+RECOMMENDED: R2 - Rail land bridge via Khorgos
+  $1,069 | 24.0 days expected (P90 28.0) | delay prob 48% | geo risk 0.56 | on-time 98%
+
+Price of constraints: the cheapest option, R1 (Sea via Singapore & Cape, $663), is ruled out by the deadline; the recommendation costs $407 more.
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R1 Sea via Singapore & Cape: ruled out - on-time probability 0% < required 85% for the 34-day deadline.
+  R3 Air via Frankfurt: ruled out - cost $4,089 exceeds budget $1,610.
+
+==========================================================================================
+
+Shipment SHP-026: electronics, 3.7 t, Shenzhen -> Los Angeles
+Priority: time-critical | Constraints: deadline 22 d at >= 85% on-time, budget $18,930
+
+RECOMMENDED: R4 - Air via Anchorage
+  $15,874 | 4.3 days expected (P90 5.4) | delay prob 15% | geo risk 0.15 | on-time 100%
+
+Price of constraints: the cheapest option, R1 (Direct transpacific sea, $696), is ruled out by the deadline; the recommendation costs $15,179 more.
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R1 Direct transpacific sea: ruled out - on-time probability 0% < required 85% for the 22-day deadline.
+  R2 Sea via Busan transshipment: ruled out - on-time probability 0% < required 85% for the 22-day deadline.
+  R3 Sea to Oakland + truck: ruled out - on-time probability 0% < required 85% for the 22-day deadline.
+
+==========================================================================================
+
+Shipment SHP-027: perishables, 9.0 t, Nhava Sheva -> Hamburg
+Priority: time-critical | Constraints: deadline 25 d at >= 85% on-time, budget $26,110
+
+RECOMMENDED: R4 - Air via Frankfurt
+  $20,683 | 4.2 days expected (P90 5.6) | delay prob 23% | geo risk 0.09 | on-time 100%
+
+Price of constraints: the cheapest option, R1 (Sea via Suez, $1,415), is ruled out by the deadline; the recommendation costs $19,268 more.
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R1 Sea via Suez: ruled out - on-time probability 47% < required 85% for the 25-day deadline.
+  R2 Sea via Cape of Good Hope: ruled out - on-time probability 0% < required 85% for the 25-day deadline.
+  R3 Sea via Jebel Ali & Suez: ruled out - on-time probability 0% < required 85% for the 25-day deadline.
+
+==========================================================================================
+
+Shipment SHP-028: pharma, 4.7 t, Chennai -> New York
+Priority: risk-averse | Constraints: budget $1,640, geo-risk <= 0.60
+
+RECOMMENDED: R2 - Sea via Colombo & Cape
+  $1,275 | 44.6 days expected (P90 50.0) | delay prob 47% | geo risk 0.19
+
+Price of constraints: the cheapest option, R1 (Sea via Colombo & Suez, $1,080), is ruled out by the geopolitical-risk limit; the recommendation costs $196 more.
+
+Why R2 over R3 (Sea via Singapore & Panama): it arrives 6.2 days sooner on average (44.6 vs 50.8) and has a 47% delay probability vs 51%. Under the risk-averse profile this is the stronger option (trade-off penalty 1 vs 13 points; 0 = best on every criterion).
+
+Other options:
+  R1 Sea via Colombo & Suez: ruled out - geopolitical risk 0.68 above limit 0.60.
+  R4 Air via Frankfurt: ruled out - cost $26,603 exceeds budget $1,640.
+
+Confidence: MODERATE - winner holds in 100% of priority-weight perturbations and 72% of risk-estimate perturbations.
+  Break-even: switches to R3 (Sea via Singapore & Panama) if the geopolitical risk weight rises from 35% to 87%.
+
+==========================================================================================
+
+Shipment SHP-029: auto parts, 9.7 t, Santos -> Rotterdam
+Priority: balanced | No hard constraints
+
+RECOMMENDED: R1 - Direct sea
+  $1,153 | 23.3 days expected (P90 28.5) | delay prob 35% | geo risk 0.22
+
+Why R1 over R3 (Sea via Tanger Med transshipment): it has geopolitical risk 0.22 vs 0.19, but has a 35% delay probability vs 43% and arrives 3.8 days sooner on average (23.3 vs 27.1). For a balanced shipment, the gain in delay probability outweighs the geopolitical risk penalty (trade-off penalty 39 vs 56 points; 0 = best on every criterion).
+
+Other options:
+  R2 Sea via Algeciras transshipment: never a contender - R3 is at least as good on cost, time, delay risk and geo risk, and strictly better on at least one.
+  R4 Air via Frankfurt: penalty 173 - main weakness vs R1: it costs $35,658 more (+3094%).
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 80% of risk-estimate perturbations.
+  Break-even: switches to R4 (Air via Frankfurt) if the expected transit time weight rises from 25% to 64%.
+
+==========================================================================================
+
+Shipment SHP-030: electronics, 5.2 t, Busan -> Houston
+Priority: risk-averse | Constraints: deadline 38 d at >= 75% on-time, budget $1,160, geo-risk <= 0.60
+
+RECOMMENDED: R1 - Sea via Panama
+  $982 | 34.4 days expected (P90 40.3) | delay prob 44% | geo risk 0.22 | on-time 82%
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R2 Sea to LA + rail landbridge: ruled out - cost $1,448 exceeds budget $1,160.
+  R3 Sea via Manzanillo + rail: ruled out - cost $1,404 exceeds budget $1,160.
+  R4 Air via Anchorage: ruled out - cost $17,875 exceeds budget $1,160.
+
+==========================================================================================
+
+Shipment SHP-031: electronics, 5.7 t, Shanghai -> Rotterdam
+Priority: balanced | Constraints: budget $1,960
+
+RECOMMENDED: R2 - Sea via Singapore & Cape
+  $1,649 | 51.1 days expected (P90 57.8) | delay prob 54% | geo risk 0.15
+
+Why R2 over R1 (Sea via Singapore & Suez): it takes 8.0 days longer on average (51.1 vs 43.1), but has geopolitical risk 0.15 vs 0.78 and has a 54% delay probability vs 63%. For a balanced shipment, the gain in geopolitical risk outweighs the expected transit time penalty (trade-off penalty 14 vs 43 points; 0 = best on every criterion).
+
+Other options:
+  R3 Rail land bridge via Khorgos: ruled out - cost $3,082 exceeds budget $1,960.
+  R4 Sea-air via Jebel Ali / Dubai: ruled out - cost $13,092 exceeds budget $1,960.
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 92% of risk-estimate perturbations.
+  Break-even: switches to R1 (Sea via Singapore & Suez) if the expected transit time weight rises from 25% to 50%.
+
+==========================================================================================
+
+Shipment SHP-032: electronics, 5.0 t, Shenzhen -> Los Angeles
+Priority: balanced | Constraints: budget $1,200
+
+RECOMMENDED: R1 - Direct transpacific sea
+  $815 | 26.7 days expected (P90 32.6) | delay prob 39% | geo risk 0.16
+
+Why R1 over R2 (Sea via Busan transshipment): it has a 39% delay probability vs 49% and arrives 3.6 days sooner on average (26.7 vs 30.3). Under the balanced profile this is the stronger option (trade-off penalty 0 vs 19 points; 0 = best on every criterion).
+
+Other options:
+  R3 Sea to Oakland + truck: ruled out - cost $1,240 exceeds budget $1,200.
+  R4 Sea-air via Busan / Incheon: ruled out - cost $15,305 exceeds budget $1,200.
+  R5 Air via Anchorage: ruled out - cost $18,700 exceeds budget $1,200.
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 82% of risk-estimate perturbations.
+  Break-even: switches to R2 (Sea via Busan transshipment) if the geopolitical risk weight rises from 15% to 97%.
+
+==========================================================================================
+
+Shipment SHP-033: perishables, 6.7 t, Nhava Sheva -> Hamburg
+Priority: time-critical | Constraints: deadline 14 d at >= 85% on-time
+
+WARNING: no route satisfies every hard constraint. Showing the least-violating option -- escalate to a planner (relax deadline/budget or split the shipment).
+  - still violates: on-time probability 77% < required 85% for the 14-day deadline
+RECOMMENDED: R3 - Sea-air via Dubai
+  $12,766 | 13.2 days expected (P90 19.5) | delay prob 50% | geo risk 0.38 | on-time 77%
+
+Price of constraints: the cheapest option, R1 (Sea via Suez, $957), is ruled out by the deadline; the recommendation costs $11,809 more.
+
+Why R3: among routes that respect the geopolitical-risk limit (never relaxed), it has the smallest relative breach of the relaxable constraints (deadline, budget).
+
+Other options:
+  R1 Sea via Suez: violates - on-time probability 0% < required 85% for the 14-day deadline.
+  R2 Sea via Cape of Good Hope: violates - on-time probability 0% < required 85% for the 14-day deadline.
+
+==========================================================================================
+
+Shipment SHP-034: electronics, 2.2 t, Chennai -> New York
+Priority: balanced | No hard constraints
+
+RECOMMENDED: R3 - Air via Frankfurt
+  $10,016 | 4.8 days expected (P90 6.0) | delay prob 18% | geo risk 0.10
+
+Why R3 over R1 (Sea via Colombo & Cape): it costs $9,107 more (+1002%), but arrives 41.5 days sooner on average (4.8 vs 46.3), has a 18% delay probability vs 54% and has geopolitical risk 0.10 vs 0.21. For a balanced shipment, the gain in expected transit time outweighs the cost penalty (trade-off penalty 24 vs 124 points; 0 = best on every criterion).
+
+Other options:
+  R2 Sea via Singapore & Panama: penalty 142 - main weakness vs R3: it takes 48.5 days longer on average (53.3 vs 4.8).
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 100% of risk-estimate perturbations.
+  Break-even: switches to R1 (Sea via Colombo & Cape) if the cost weight rises from 35% to 74%.
+
+==========================================================================================
+
+Shipment SHP-035: apparel, 13.0 t, Santos -> Rotterdam
+Priority: balanced | Constraints: deadline 31 d at >= 75% on-time, budget $1,560
+
+RECOMMENDED: R1 - Direct sea
+  $1,378 | 23.3 days expected (P90 28.3) | delay prob 36% | geo risk 0.19 | on-time 95%
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R2 Sea via Algeciras transshipment: ruled out - cost $1,685 exceeds budget $1,560.
+  R3 Sea via Tanger Med transshipment: ruled out - cost $1,680 exceeds budget $1,560.
+  R4 Air via Frankfurt: ruled out - cost $54,455 exceeds budget $1,560.
+  R5 Sea via Tanger Med transshipment (extra transshipment): ruled out - on-time probability 64% < required 75% for the 31-day deadline; cost $2,226 exceeds budget $1,560.
+
+==========================================================================================
+
+Shipment SHP-036: perishables, 5.2 t, Busan -> Houston
+Priority: time-critical | No hard constraints
+
+RECOMMENDED: R2 - Sea to LA + rail landbridge
+  $1,483 | 28.2 days expected (P90 32.4) | delay prob 47% | geo risk 0.11
+
+Why R2 over R3 (Sea via Manzanillo + rail): it has geopolitical risk 0.11 vs 0.29. Under the time-critical profile this is the stronger option (trade-off penalty 133 vs 140 points; 0 = best on every criterion).
+
+Other options:
+  R1 Sea via Panama: penalty 152 - main weakness vs R2: it takes 6.7 days longer on average (34.9 vs 28.2).
+  R4 Air via Anchorage: penalty 189 - main weakness vs R2: it costs $19,157 more (+1292%).
+  R5 Sea via Panama (extra transshipment): never a contender - R1 is at least as good on cost, time, delay risk and geo risk, and strictly better on at least one.
+
+Confidence: CLOSE CALL - winner holds in 70% of priority-weight perturbations and 55% of risk-estimate perturbations.
+  Break-even: switches to R4 (Air via Anchorage) if the delay probability weight rises from 30% to 48%.
+  Recommend operator review: the top options are near-equivalent under plausible priorities.
+
+==========================================================================================
+
+Shipment SHP-037: auto parts, 12.2 t, Shanghai -> Rotterdam
+Priority: balanced | No hard constraints
+
+RECOMMENDED: R3 - Rail land bridge via Khorgos
+  $6,422 | 25.0 days expected (P90 30.1) | delay prob 54% | geo risk 0.56
+
+Why R3 over R2 (Sea via Singapore & Cape): it has geopolitical risk 0.56 vs 0.15, costs $2,848 more (+80%), but arrives 26.6 days sooner on average (25.0 vs 51.5). For a balanced shipment, the gain in expected transit time outweighs the geopolitical risk penalty (trade-off penalty 114 vs 130 points; 0 = best on every criterion).
+
+Other options:
+  R1 Sea via Singapore & Suez: penalty 151 - main weakness vs R3: it takes 18.1 days longer on average (43.1 vs 25.0).
+  R4 Sea-air via Jebel Ali / Dubai: penalty 161 - main weakness vs R3: it costs $17,663 more (+275%).
+  R5 Air via Frankfurt: penalty 132 - main weakness vs R3: it costs $30,808 more (+480%).
+
+Confidence: CLOSE CALL - winner holds in 56% of priority-weight perturbations and 72% of risk-estimate perturbations.
+  Break-even: switches to R5 (Air via Frankfurt) if the delay probability weight rises from 25% to 32%.
+  Recommend operator review: the top options are near-equivalent under plausible priorities.
+
+==========================================================================================
+
+Shipment SHP-038: apparel, 22.1 t, Shenzhen -> Los Angeles
+Priority: balanced | No hard constraints
+
+RECOMMENDED: R1 - Direct transpacific sea
+  $3,005 | 26.1 days expected (P90 31.3) | delay prob 35% | geo risk 0.15
+
+Why R1 over R3 (Sea-air via Busan / Incheon): it takes 14.6 days longer on average (26.1 vs 11.4), but is $67,964 cheaper (-96%). For a balanced shipment, the gain in cost outweighs the expected transit time penalty (trade-off penalty 65 vs 308 points; 0 = best on every criterion).
+
+Other options:
+  R2 Sea via Busan transshipment: never a contender - R1 is at least as good on cost, time, delay risk and geo risk, and strictly better on at least one.
+  R4 Air via Anchorage: penalty 337 - main weakness vs R1: it costs $84,848 more (+2823%).
+
+Confidence: ROBUST - winner holds in 100% of priority-weight perturbations and 92% of risk-estimate perturbations.
+  Break-even: switches to R4 (Air via Anchorage) if the expected transit time weight rises from 25% to 73%.
+
+==========================================================================================
+
+Shipment SHP-039: bulk goods, 19.2 t, Nhava Sheva -> Hamburg
+Priority: cost-first | Constraints: deadline 38 d at >= 75% on-time, budget $41,100
+
+RECOMMENDED: R2 - Sea-air via Dubai
+  $34,648 | 11.7 days expected (P90 16.5) | delay prob 40% | geo risk 0.37 | on-time 100%
+
+Price of constraints: the cheapest option, R1 (Sea via Cape of Good Hope, $3,279), is ruled out by the deadline; the recommendation costs $31,369 more.
+
+Why: it is the only route that is both feasible and not dominated by another option.
+
+Other options:
+  R1 Sea via Cape of Good Hope: ruled out - on-time probability 0% < required 75% for the 38-day deadline.
+  R3 Air via Frankfurt: ruled out - cost $45,643 exceeds budget $41,100.
+  R4 Sea via Cape of Good Hope (extra transshipment): ruled out - on-time probability 0% < required 75% for the 38-day deadline.
+
+==========================================================================================
+
+Shipment SHP-040: apparel, 19.2 t, Chennai -> New York
+Priority: cost-first | No hard constraints
+
+RECOMMENDED: R2 - Sea via Colombo & Cape
+  $4,476 | 46.0 days expected (P90 52.7) | delay prob 53% | geo risk 0.20
+
+Why R2 over R1 (Sea via Colombo & Suez): it takes 8.9 days longer on average (46.0 vs 37.1), costs $996 more (+29%), but has geopolitical risk 0.20 vs 0.71 and has a 53% delay probability vs 59%. For a cost-first shipment, the gain in geopolitical risk outweighs the expected transit time penalty (trade-off penalty 80 vs 85 points; 0 = best on every criterion).
+
+Other options:
+  R3 Sea via Singapore & Panama: penalty 95 - main weakness vs R2: it takes 6.4 days longer on average (52.4 vs 46.0).
+  R4 Air via Frankfurt: penalty 779 - main weakness vs R2: it costs $98,695 more (+2205%).
+  R5 Sea via Colombo & Suez (extra transshipment): never a contender - R1 is at least as good on cost, time, delay risk and geo risk, and strictly better on at least one.
+
+Confidence: CLOSE CALL - winner holds in 64% of priority-weight perturbations and 48% of risk-estimate perturbations.
+  Break-even: switches to R1 (Sea via Colombo & Suez) if the expected transit time weight rises from 15% to 22%.
+  Recommend operator review: the top options are near-equivalent under plausible priorities.
